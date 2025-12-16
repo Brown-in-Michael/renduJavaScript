@@ -6,14 +6,12 @@
     /* Background: #0F172A (deep navy)*/
     --background-color: #0F172A;
     /* Primary UI: #1E293B (slate blue) */
-
+    --prymary-ui-color:  #1E293B;
+    /* Accent (buttons, clues): #EAB308 (gold) */
+    --accent-color: #EAB308;
+    /* Secondary Accent: #DC2626 (danger red) */
+    --secondary-accent-color: #DC2626;
+    /* Text (primary): #F8FAFC (near white) */
+    --text-primary-color: #F8FAFC;
 }
-/* Background: #0F172A (deep navy)
 
-Primary UI: #1E293B (slate blue)
-
-Accent (buttons, clues): #EAB308 (gold)
-
-Secondary Accent: #DC2626 (danger red)
-
-Text (primary): #F8FAFC (near white) */
