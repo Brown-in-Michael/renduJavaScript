@@ -3,7 +3,17 @@
   font-style: normal;
 }
 :root{
-    /* Background Color */
-    --background-color: 
-}
+    /* Background: #0F172A (deep navy)*/
+    --background-color: #0F172A;
+    /* Primary UI: #1E293B (slate blue) */
 
+}
+/* Background: #0F172A (deep navy)
+
+Primary UI: #1E293B (slate blue)
+
+Accent (buttons, clues): #EAB308 (gold)
+
+Secondary Accent: #DC2626 (danger red)
+
+Text (primary): #F8FAFC (near white) */
