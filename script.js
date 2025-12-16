@@ -11,7 +11,7 @@ fetch(JSON_LINK)
         // Etape 3: Liste nos element HTML
         // By creating variables
         // head
-        let Header = document.getElementById("head");
+        let Header = document.getElementById("backgroundImage");
         // avantages
         let ADvantages = document.getElementById("avantages");
         // produits
@@ -25,6 +25,7 @@ fetch(JSON_LINK)
         // Etape 5: Div avec une H1, p, et 2 button dans le header
             // Pour le div
             const newDiv = document.createElement("div");
+            newDiv.classList.add("banner-title")
             // Nos element dans le div
             // title
             const insertH1 = document.createElement("h1");
@@ -34,6 +35,7 @@ fetch(JSON_LINK)
             insertp.textContent = data.phraseAccroche;
             // div pour les button
             const divButtons = document.createElement("div");
+            divButtons.classList.add("buttons");
             // button buy
             const buyButton = document.createElement("a");
             buyButton.textContent = data.texteAppelAction;

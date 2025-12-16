@@ -1,4 +1,5 @@
 *{
+    margin: 0%;
   font-family: "Chocolate Classical Sans", sans-serif;
   font-style: normal;
 }
@@ -14,11 +15,48 @@
     /* Text (primary): #F8FAFC (near white) */
     --text-primary-color: #F8FAFC;
 }
-header{
+nav{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     img{
+       
         height: 70px;
         width: 70px;
     }
+    ul{
+        gap: 20px;
+        list-style: none;
+        display: flex;
+    }
+    a{
+        color: var(--text-primary-color);
+    }
+}
+#backgroundImage{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20251023/pngtree-an-eerie-escape-room-challenge-with-a-ticking-digital-clock-and-image_19963421.webp");
+    background-size: cover;
+    height: 100vh;
+    color: var(--text-primary-color);  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+   
+}
+.buttons{
+    display: flex;
+    gap: 100px;
+}
+.banner-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 /* .container-avantages{
