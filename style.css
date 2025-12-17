@@ -1,8 +1,11 @@
+/* Settings */
 *{
     margin: 0%;
-  font-family: "Chocolate Classical Sans", sans-serif;
-  font-style: normal;
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-style: normal;
+    text-decoration: none;
 }
+/* Color Variables */
 :root{
     /* Background: #0F172A (deep navy)*/
     --background-color: #0F172A;
@@ -15,14 +18,17 @@
     /* Text (primary): #F8FAFC (near white) */
     --text-primary-color: #F8FAFC;
 }
+/* Header */
 nav{
-    background-color: var(--background-color);
+    background: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    position: fixed;
+    width: -webkit-fill-available;
+    top: 0%;
     img{
-       
         height: 70px;
         width: 70px;
     }
@@ -33,7 +39,26 @@ nav{
     }
     a{
         color: var(--text-primary-color);
+        margin-right: 20px;
     }
+    a:hover{
+        transition: ease-in-out 0.3s;
+        color: var(--accent-color);
+    }
+    
+}
+#Contact{
+    color: var(--accent-color);
+    background-color: var(--background-color);
+    padding: 7px 13px;
+    border: solid 2px var(--accent-color);
+    border-radius: 5px;
+}
+#Contact:hover{
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    transition: 0.3s ease-in-out;
+    border: var(--background-color) 2px solid;
 }
 #backgroundImage{
     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20251023/pngtree-an-eerie-escape-room-challenge-with-a-ticking-digital-clock-and-image_19963421.webp");
@@ -45,11 +70,40 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 30px;
+    h1{
+        font-size: 60px;
+    }
    
 }
 .buttons{
     display: flex;
-    gap: 100px;
+    gap: 50px;
+    a:first-child{
+        color: var(--background-color);
+        background-color: var(--accent-color);
+        padding: 7px 13px;
+        border: 2px var(--accent-color) solid;
+        border-radius: 5px;
+    }
+
+    a:first-child:hover{
+        color: var(--accent-color);
+        transition: ease-in-out 0.3s;
+        border: var(--accent-color) solid 2px;
+        background-color: var(--prymary-ui-color);
+    }
+    /* a:last-child{
+        color: var(--accent-color);
+        background-color: var(--prymary-ui-color);
+        padding: 7px 13px;
+        border: 2px var(--accent-color) solid;
+        border-radius: 5px;
+    }
+    a:last-child:hover{
+        color: var(--prymary-ui-color);
+        transition: ease-in-out 0.3s;
+        /* background-color: var(--accent-color); */
+     
 }
 .banner-title{
     display: flex;
@@ -58,22 +112,130 @@ nav{
     align-items: center;
     
 }
-
-/* .container-avantages{
-
+/* advantages Section */
+.container-avantages{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
-.container-cards{
 
+.container-cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px;
+    div{
+        height: 150px;
+        width: 350px;
+        border: solid 2px var(--background-color);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+/* Section Activité */
+#products{
+    background-color: var(--prymary-ui-color);
+    color: var(--text-primary-color);
+}
+#events{
+    padding-bottom: 50px;
+    background-color: var(--prymary-ui-color);
+    color: var(--text-primary-color);
+}
+.text-activity{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 .card-container{
-
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 80px;
+    div{
+        height: 400px;
+        width: 250px;
+        border: solid 2px var(--text-primary-color);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+        padding: 10px;
+        transition: ease-in-out 0.8s;
+        p{
+            text-align: center;
+        }
+    }
+    div:hover{
+        transform: scale(1.1);
+        border-radius: 5px;
+        background-color: var(--text-primary-color);
+        color: var(--background-color);
+        transition: ease-in-out 0.8s;
+        img{  
+            border-radius: 5px;
+        }
+    }
 } 
-.reviews-container{
 
+.reviews-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    div{
+        height: 450px;
+        width: 280px;
+        padding: 15px;
+        border: #0F172A solid 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        h4{
+            font-size: larger;
+        }
+        strong{
+            font-style: italic;
+        }
+        p{
+            text-align: center;
+        }
+    }
 }
-*/
+
 
 .eventImages{
     height: 200px;
     width: 200px;
+}
+
+footer{
+    div:first-child{
+        display: flex;
+        justify-content: space-between;
+        ul{
+            list-style: none;
+        }
+    }
+    img{
+        height: 70px;
+        width: 70px;
+    }
 }

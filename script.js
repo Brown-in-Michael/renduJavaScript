@@ -40,11 +40,11 @@ fetch(JSON_LINK)
             const buyButton = document.createElement("a");
             buyButton.textContent = data.texteAppelAction;
             // button explore
-            const exploreButton = document.createElement("a");
-            exploreButton.textContent = "Explorer";
+            // const exploreButton = document.createElement("a");
+            // exploreButton.textContent = "Explorer";
             // Etape 5: On inject les element using appendchild
             divButtons.appendChild(buyButton);
-            divButtons.appendChild(exploreButton);
+            // divButtons.appendChild(exploreButton);
 
             newDiv.appendChild(insertH1);
             newDiv.appendChild(insertp);
@@ -84,9 +84,15 @@ fetch(JSON_LINK)
             // Loop pour les cartes
 
             data.avantagesClients.forEach(element => {
-                let cards = document.createElement("div"); 
+                const eachdiv = document.createElement("div");
+                let cards = document.createElement("p"); 
+                let cardsTitle = document.createElement("h3");
+                cardsTitle.textContent = "Avantage";
                 cards.textContent = element;
-                cardDiv.appendChild(cards);
+                eachdiv.appendChild(cardsTitle);
+                eachdiv.appendChild(cards);
+                cardDiv.appendChild(eachdiv);
+                
 
             });
             // Affichier le
@@ -99,6 +105,7 @@ fetch(JSON_LINK)
             pourEvents.classList.add("card-container");
             // Use for each pour les event cards
             data.activites.forEach(elementDeux => {
+                const cardAct = document.createElement("div");
                 // créé un variable pour event titre
                 let nomActivite = document.createElement("h4");
                 nomActivite.textContent = elementDeux.nom;
@@ -110,9 +117,11 @@ fetch(JSON_LINK)
                 images.classList.add("eventImages")
                 images.src = elementDeux["image-url"];
                 // Affichier
-                pourEvents.appendChild(images);
-                pourEvents.appendChild(nomActivite);
-                pourEvents.appendChild(descActivite);
+
+                cardAct.appendChild(images);
+                cardAct.appendChild(nomActivite);
+                cardAct.appendChild(descActivite);
+                pourEvents.appendChild(cardAct);
                 
             });
             Activities.appendChild(pourEvents);
@@ -124,11 +133,12 @@ fetch(JSON_LINK)
             pourAvis.classList.add("reviews-container")
 
             data.temoignages.forEach(elementTrois => {
+                const reviews = document.createElement("div")
                 // prénom
                 let names = document.createElement("h4");
                 names.textContent = elementTrois.prenom;
                 // Experience
-                let experiences = document.createElement("p");
+                let experiences = document.createElement("strong");
                 experiences.textContent = elementTrois.typeExperience;
                 // Avis
                 let comment = document.createElement("p");
@@ -138,10 +148,11 @@ fetch(JSON_LINK)
                 review.textContent = "Review: " + elementTrois.note + "/5";
 
                 // Affiche
-                pourAvis.appendChild(names);
-                pourAvis.appendChild(experiences);
-                pourAvis.appendChild(comment);
-                pourAvis.appendChild(review);
+                reviews.appendChild(names);
+                reviews.appendChild(experiences);
+                reviews.appendChild(comment);
+                reviews.appendChild(review);
+                pourAvis.appendChild(reviews);
             });
             Avis.appendChild(pourAvis);
 
