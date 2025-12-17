@@ -63,16 +63,15 @@ fetch(JSON_LINK)
 
             // div pour le strong, h2, p
             const divtexts = document.createElement("div");
-            let strongtext = document.createElement("strong");
-            strongtext.textContent = "Pourquoi";
+           
 
             let avantagesTitle = document.createElement("h2");
-            avantagesTitle.textContent = "Ce qui nous définit";
+            avantagesTitle.textContent = "Nos Advantages";
 
             let advantagesParagraph = document.createElement("p");
             advantagesParagraph.textContent = "Qualité sans égale dans chaque détail";
             
-            divtexts.appendChild(strongtext);
+            
             divtexts.appendChild(avantagesTitle);
             divtexts.appendChild(advantagesParagraph);
             containerAvantages.appendChild(divtexts);
@@ -82,15 +81,21 @@ fetch(JSON_LINK)
             cardDiv.classList.add("container-cards");
 
             // Loop pour les cartes
-
-            data.avantagesClients.forEach(element => {
+            const imojis = ["👽","👻","🎮"];
+            const pees = ["Plongez dans un univers où chaque détail compte et où l’esprit est constamment mis à l’épreuve. Nos énigmes captivantes sont conçues pour stimuler la réflexion, renforcer l’esprit d’équipe et offrir des expériences immersives inoubliables. ", 
+                "Nos maîtres du jeu passionnés sont au cœur de votre aventure. Attentifs, dynamiques et toujours à l’écoute, ils vous accompagnent à chaque étape pour vous immerger pleinement dans l’expérience.", 
+                "Chaque décor a été pensé dans les moindres détails pour vous plonger dans une ambiance unique et réaliste. Jeux de lumière, effets sonores et scénographies soignées s’unissent pour créer une immersion totale."];
+            data.avantagesClients.forEach((element, index) => {
                 const eachdiv = document.createElement("div");
-                let cards = document.createElement("p"); 
-                let cardsTitle = document.createElement("h3");
-                cardsTitle.textContent = "Avantage";
+                let paras = document.createElement("p");
+                let cards = document.createElement("h3"); 
+                let cardsTitle = document.createElement("span");
+                cardsTitle.textContent = imojis[index];
+                paras.textContent = pees[index];
                 cards.textContent = element;
                 eachdiv.appendChild(cardsTitle);
                 eachdiv.appendChild(cards);
+                eachdiv.appendChild(paras);
                 cardDiv.appendChild(eachdiv);
                 
 
