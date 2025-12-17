@@ -82,7 +82,7 @@ fetch(JSON_LINK)
 
             // Loop pour les cartes
             const imojis = ["👽","👻","🎮"];
-            const pees = ["Plongez dans un univers où chaque détail compte et où l’esprit est constamment mis à l’épreuve. Nos énigmes captivantes sont conçues pour stimuler la réflexion, renforcer l’esprit d’équipe et offrir des expériences immersives inoubliables. ", 
+            const pees = ["Plongez dans un univers où chaque détail compte et où l’esprit est constamment mis à l’épreuve. Nos énigmes captivantes sont conçues pour stimuler la réflexion, renforcer l’esprit d’équipe et offrir des expériences inoubliables. ", 
                 "Nos maîtres du jeu passionnés sont au cœur de votre aventure. Attentifs, dynamiques et toujours à l’écoute, ils vous accompagnent à chaque étape pour vous immerger pleinement dans l’expérience.", 
                 "Chaque décor a été pensé dans les moindres détails pour vous plonger dans une ambiance unique et réaliste. Jeux de lumière, effets sonores et scénographies soignées s’unissent pour créer une immersion totale."];
             data.avantagesClients.forEach((element, index) => {
@@ -147,7 +147,7 @@ fetch(JSON_LINK)
                 experiences.textContent = elementTrois.typeExperience;
                 // Avis
                 let comment = document.createElement("p");
-                comment.textContent = elementTrois.commentaire;
+                comment.textContent = "'' " + elementTrois.commentaire + " ''";
                 // Grade
                 let review = document.createElement("span")
                 review.textContent = "Review: " + elementTrois.note + "/5";
