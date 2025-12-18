@@ -282,4 +282,8 @@ footer{
         font-size: 40px;
         text-align: center;
     }
+    p{
+        padding-top: 25px;
+        text-align: center;
+    }
 }
