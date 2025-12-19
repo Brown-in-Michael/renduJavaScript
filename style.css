@@ -287,3 +287,26 @@ footer{
         text-align: center;
     }
 }
+#reserveThis{
+    display: flex;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    padding: 20px;
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.twoInputs{
+    display: flex;
+    flex-direction: row;
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}

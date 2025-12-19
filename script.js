@@ -38,6 +38,7 @@ fetch(JSON_LINK)
             divButtons.classList.add("buttons");
             // button buy
             const buyButton = document.createElement("a");
+            buyButton.href = "reserve.html";
             buyButton.textContent = data.texteAppelAction;
             // button explore
             // const exploreButton = document.createElement("a");
