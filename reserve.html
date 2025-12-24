@@ -29,47 +29,74 @@
             <a href="" id="Contact">Contact</a>
         </nav>
         <div id="backgroundImage">
-            <h1>Dehors! - Escape Game Paris</h1>
-            <p>Découvrez l'aventure ultime avec Dehors!, votre destination d'escape game à Paris</p>
-           <div class="buttons"><a href="#reserveThis">Réservez votre aventure</a></div> 
+           
         </div>
     </header>
     <main>
         <section id="reserveThis">
-            <div>
-                <h2>Informations clients</h2>
+            <h2>Réservez votre Place</h2>
+            <div class="cashout">
+                <div class="card product" id="cashOut" data-base="25">
+                    <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/escape-game/mystere-du-manoir.webp" alt="" class="eventImages">
+                    <h3>Mystère du Manoir</h3>
+                    <p class="price">€50</p>
+                    <div class="quantité">
+                        <span>👤</span>
+                        <input type="number" name="people" id="quantity" placeholder="2 personnes">
+                    </div>
+                </div>
+
+                 <div class="card product" id="cashOut" data-base="30">
+                    <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/escape-game/evasion-dans-l-espace.webp" alt="" class="eventImages">
+                    <h3>Évasion dans l'Espace</h3>
+                    <p class="price">€60</p>
+                    <div class="quantité">
+                        <span>👤</span>
+                        <input type="number" name="people" id="quantity" placeholder="2 personnes">
+                    </div>
+                </div>
+
+                <div class="card product" id="cashOut" data-base="35">
+                    <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/escape-game/mission-secrete-paris.webp" alt="" class="eventImages">
+                    <h3>Mission Secrète: Paris</h3>
+                    <p class="price">€70</p>
+                    <div class="quantité">
+                        <span>👤</span>
+                        <input type="number" name="people" id="quantity" placeholder="2 personnes">
+                    </div>
+                </div>
             </div>
+
             <form action="">
-                <div><label for="prénom">Prénom *</label>
+                <div><label for="prénom">Prénom <span>*</span></label>
                 <input type="text" name="prénom" id="prénom"></div>
                 
-                <div><label for="nom">Nom *</label>
+                <div><label for="nom">Nom <span>*</span></label>
                 <input type="text" name="nom" id="nom"></div>
                 
-                <div><label for="email">Adresse E-mail *</label>
+                <div><label for="email">Adresse Mail <span>*</span></label>
                 <input type="text" name="email" id="email"></div>
                 
-                <div><label for="number">Numéro de Téléphone *</label>
+                <div><label for="number">Téléphone <span>*</span></label>
                 <input type="number" name="number" id="number"></div>
             
                 <div>
-                    <label for="adresse">Adresse *</label>
+                    <label for="adresse">Adresse <span>*</span></label>
                     <input type="text" name="adresse" id="adresse">
                 </div>
 
                 <div class="twoInputs">
                     <div>
-                        <label for="codePostal">Code Postal *</label>
+                        <label for="codePostal">Code Postal <span>*</span></label>
                         <input type="number" name="codePostal" id="codePostal">
                     </div>
                     <div>
-                        <label for="ville">Ville *</label>
+                        <label for="ville">Ville <span>*</span></label>
                         <input type="text" name="ville" id="ville">
                     </div>
                 </div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Réservez" id="reserve">
             </form>
-
         </section>
     </main>
     <footer>
@@ -100,6 +127,6 @@
             </div>
         </div>
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>

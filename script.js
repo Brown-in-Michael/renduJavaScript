@@ -11,6 +11,8 @@ fetch(JSON_LINK)
         // Etape 3: Liste nos element HTML
         // By creating variables
         // head
+        let buyThese = document.getElementById("cashOut");
+
         let Header = document.getElementById("backgroundImage");
         // avantages
         let ADvantages = document.getElementById("avantages");
@@ -128,6 +130,7 @@ fetch(JSON_LINK)
                 cardAct.appendChild(nomActivite);
                 cardAct.appendChild(descActivite);
                 pourEvents.appendChild(cardAct);
+
                 
             });
             Activities.appendChild(pourEvents);
@@ -161,6 +164,29 @@ fetch(JSON_LINK)
                 pourAvis.appendChild(reviews);
             });
             Avis.appendChild(pourAvis);
+
+            // Reserve html
+            
+            const playerInput = document.getElementById("players");
+            const products = document.querySelectorAll(".product");
+
+            function updatePrices() {
+            const players = parseInt(playerInput.value);
+
+            products.forEach(product => {
+            const basePrice = product.dataset.base;
+            const total = basePrice * players;
+            product.querySelector(".price").textContent = `€${total}`;
+            
+            });
+             
+            }
+    
+            // Initial calculation
+            updatePrices();
+
+            // Update when number changes
+            playerInput.addEventListener("input", updatePrices);
 
         
 

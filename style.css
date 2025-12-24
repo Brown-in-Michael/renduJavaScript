@@ -292,8 +292,18 @@ footer{
     }
 }
 #reserveThis{
+    padding: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    span{
+        color: var(--secondary-accent-color);
+    }
+    h2{
+        font-size: 40px;
+        /* padding-left: 450px; */
+    }
 }
 form{
     display: flex;
@@ -301,16 +311,87 @@ form{
     gap: 20px;
     width: 500px;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #2d2d2d38;
+    height: 450px;
     div{
         display: flex;
         flex-direction: column;
     }
 }
+#prénom{
+    width: 250px;
+}
+#nom{
+    width: 250px;
+}
+#email{
+    width: 250px;
+}
+#number{
+    width: 250px;
+}
+#adresse{
+    width: 250px;
+}
+/* Button reservez */
+#reserve{
+    width: 300px;
+    margin-left: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: var(--prymary-ui-color) solid 1px;
+}
+#reserve:hover{
+    transition: ease-in-out 0.3s;
+    background-color: var(--prymary-ui-color);
+    color: var(--accent-color);
+    border: var(--prymary-ui-color) solid 1px;
+}
 .twoInputs{
     display: flex;
     flex-direction: row;
+    gap: 40px;
     div{
         display: flex;
         flex-direction: column;
     }
+}
+.cashout{
+    display: flex;
+    flex-direction: row;
+    transition: ease-in-out 0.5s;
+    div{
+        width: 200px;
+    }
+    div:hover{
+        transition: ease-in-out 0.5s;
+        background-color: var(--accent-color);
+        transform: scale(1.03);
+    }
+    
+}
+.quantité{
+    display: flex;
+    gap: 5px;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #2d2d2d38;
+}
+.cashout {
+  display: flex;
+  gap: 1.5rem;
+  width: 70%;
+}
+.product {
+  flex: 1;
+  text-align: center;
+}
+.price{
+    opacity: 50%;
 }
