@@ -342,12 +342,12 @@ form{
     padding: 5px;
     background-color: var(--accent-color);
     color: var(--background-color);
-    border: var(--prymary-ui-color) solid 1px;
+    border: var(--accent-color) solid 1px;
 }
 #reserve:hover{
     transition: ease-in-out 0.3s;
     background-color: var(--prymary-ui-color);
-    color: var(--accent-color);
+    color: var(--text-primary-color);
     border: var(--prymary-ui-color) solid 1px;
 }
 .twoInputs{
@@ -375,8 +375,12 @@ form{
 }
 .quantité{
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    input{
+        width: 350px;
+    }
 }
+
 .card {
   background: white;
   padding: 1.5rem;

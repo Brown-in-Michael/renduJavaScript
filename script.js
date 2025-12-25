@@ -178,6 +178,7 @@ fetch(JSON_LINK)
             const total = basePrice * players;
             product.querySelector(".price").textContent = `€${total}`;
             
+            
             });
              
             }
@@ -188,6 +189,7 @@ fetch(JSON_LINK)
             // Update when number changes
             playerInput.addEventListener("input", updatePrices);
 
+            
         
 
     })
